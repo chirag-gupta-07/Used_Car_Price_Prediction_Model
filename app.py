@@ -52,7 +52,7 @@ if model is None:
 st.sidebar.title("Car Details")
 
 st.sidebar.subheader("Basic Information")
-year = st.sidebar.slider('Manufacturing Year', 2000, 2024, 2015)
+year = st.sidebar.slider('Manufacturing Year', 2000, 2026, 2015)
 present_price = st.sidebar.number_input('Current Ex-Showroom Price (Lakhs)', 0.0, 50.0, 5.0, 0.1)
 kms_driven = st.sidebar.number_input('Kilometers Driven', 0, 500000, 50000, 1000)
 
@@ -63,7 +63,7 @@ transmission = st.sidebar.selectbox('Transmission', ['Manual', 'Automatic'])
 owner = st.sidebar.selectbox('Number of Previous Owners', [0, 1, 2, 3])
 
 # Calculate car age
-current_year = 2024
+current_year = 2026
 car_age = current_year - year
 
 # Predict button
@@ -261,7 +261,7 @@ else:
     # Model info
     st.subheader("Model Information")
     col1, col2, col3 = st.columns(3)
-    col1.metric("Algorithm", "ML Regression")
-    col2.metric("Accuracy", "~85%")
+    col1.metric("Algorithm", "Random Forest")
+    col2.metric("Accuracy", "~95%")
     col3.metric("Dataset", "300+ cars")
 
